@@ -57,11 +57,17 @@ let obj1 = {
     age: 19
 }
 let obj2 = {
+    address: "karachi, millat garden",
+    email:"muhammadibrahim29052005gmail.com"
+}
+let obj3 = {
     city: "karachi",
     uni: "SMIU"
 }
 
 let merge_obj = {...obj1, ...obj2}
 console.log(merge_obj)
+
+
 
 
