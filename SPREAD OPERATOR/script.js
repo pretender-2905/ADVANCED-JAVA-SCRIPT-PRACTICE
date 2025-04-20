@@ -48,7 +48,7 @@ let arrr1 = [1,2,3,4,5,6];
 let arrr2 = [7,8,9,10,11];
 let merge_arr = [...arrr1, ...arrr2];
 console.log(merge_arr);
-
+console.log(arrr1.concat(arrr1,arrr2))
 // spread operator woth objects
 
 
@@ -61,12 +61,16 @@ let obj2 = {
     email:"muhammadibrahim29052005gmail.com"
 }
 let obj3 = {
+    ...obj1,
+    ...obj2,
     city: "karachi",
     uni: "SMIU"
 }
 
 let merge_obj = {...obj1, ...obj2}
-console.log(merge_obj)
+// console.log(merge_obj)
+console.log(obj3)
+// console.log(obj1.concat(obj3))  // concat is not for objects only for arrays
 
 
 
