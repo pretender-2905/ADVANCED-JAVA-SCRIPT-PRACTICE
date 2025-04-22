@@ -43,6 +43,15 @@
 //     console.log(num[i])
 // }
 
+// for in used with objects 
+
+const obj = {a:1, b:2}
+for (let key in obj){
+    console.log(key)
+    console.log(obj[key])
+}
+
+
 // // -----------------------------------------------------------------------
 
 // //map
@@ -69,6 +78,9 @@
 //     return value + 1
 // })
 // console.log(b)
+
+
+
 
 // // ---------------------------------------------------------------
 
