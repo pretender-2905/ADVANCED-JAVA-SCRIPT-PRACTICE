@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Dashboard</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f7f7f7;
+    }
+    .product {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    .stars {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛒 Product Dashboard</h1>
+  <div id="product-list"></div>
+  <h3 id="total-price"></h3>
+  <h4 id="keywords-found"></h4>
+
+  <script>
+    const products = [
+      { name: "Hair Oil", price: 500, rating: 4, inStock: true, discount: true, description: "Organic hair oil with natural ingredients." },
+      { name: "Face Wash", price: 300, rating: 5, inStock: false, discount: false, description: "Best for acne and oily skin." },
+      { name: "Shampoo", price: 450, rating: 3, inStock: true, discount: true, description: "Cleansing shampoo for daily use." },
+      { name: "Lotion", price: 600, rating: 5, inStock: true, discount: false, description: "Moisturizing lotion with vitamin E." }
+    ];
+
+    const keywordList = ["organic", "acne", "vitamin", "natural"];
+    const productList = document.getElementById("product-list");
+
+    // Filter only inStock and discounted products
+    const filtered = products.filter(p => p.inStock && p.discount);
+
+    // Display Products
+    for (let i = 0; i < filtered.length; i++) {
+      const product = filtered[i];
+
+      let stars = "";
+      for (let j = 0; j < product.rating; j++) {
+        stars += "⭐";
+      }
+
+      const div = document.createElement("div");
+      div.className = "product";
+      div.innerHTML = `
+        <h3>${product.name}</h3>
+        <p>Price: Rs ${product.price}</p>
+        <p>Rating: <span class="stars">${stars}</span></p>
+        <p>${product.description}</p>
+      `;
+      productList.appendChild(div);
+    }
+
+    // Reduce: Calculate total price
+    const total = filtered.reduce((sum, p) => sum + p.price, 0);
+    document.getElementById("total-price").innerText = `Total Price of Cart: Rs ${total}`;
+
+    // for...of: Search keywords in descriptions
+    let foundKeywords = [];
+    for (let product of filtered) {
+      for (let keyword of keywordList) {
+        if (product.description.toLowerCase().includes(keyword)) {
+          foundKeywords.push(keyword);
+        }
+      }
+    }
+
+    // Remove duplicates
+    const uniqueKeywords = [...new Set(foundKeywords)];
+
+    document.getElementById("keywords-found").innerText = `Found Keywords in Products: ${uniqueKeywords.join(", ")}`;
+  </script>
+</body>
+</html>
