@@ -82,18 +82,30 @@
 // filter
 // Given an array of user accounts, show only those who are active and verified.
 
-
 const users = [
-    { name: "Ali", active: true, verified: true },
-    { name: "Sara", active: false, verified: true },
-    { name: "John", active: true, verified: false }
-  ];
-  
-  const validUsers = users.filter(user => user.active && user.verified);
-  console.log(validUsers);
-  
+{name: "ibrahim", verified: true, active: true},
 
-//   ------------------------------------------
+{ name: "Abaas", verified: true, active: true},
+
+ {name: "amjad", verified: false, active:false},
+
+ {name: "salah", verified: true, active: false},
+]
+
+
+let filtered_user = users.filter((user)=>{
+  if(user.active && user.verified){
+    return true
+  }
+  else{
+    return false
+  }
+})
+
+console.log(filtered_user)
+
+
+
 
 // reduce
 
