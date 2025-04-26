@@ -45,11 +45,11 @@
 
 // for in used with objects 
 
-const obj = {a:1, b:2}
-for (let key in obj){
-    console.log(key)
-    console.log(obj[key])
-}
+// const obj = {a:1, b:2}
+// for (let key in obj){
+//     console.log(key)
+//     console.log(obj[key])
+// }
 
 
 // // -----------------------------------------------------------------------
@@ -107,9 +107,9 @@ for (let key in obj){
 
 // or function can also passes as variable in js
 
-let arr5 = [1,2,3,4,5,6,7]
-const reduce_func = (h1,h2)=>{
-    return h1 + h2
-}
-let newarr5 = arr5.reduce(reduce_func)
-console.log(newarr5)
+// let arr5 = [1,2,3,4,5,6,7]
+// const reduce_func = (h1,h2)=>{
+//     return h1 + h2
+// }
+// let newarr5 = arr5.reduce(reduce_func)
+// console.log(newarr5)

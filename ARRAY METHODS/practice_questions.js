@@ -84,3 +84,141 @@
 //     console.log(key)
 //     console.log(obj1[key])
 // }
+
+// -------------------------------------------------
+// Some()
+// some check the arays and tell if some of the elements of array passed conditions or not and gives thre element that passes the conditions.
+
+// let numbers = [1,2,3,4,5]
+// let hasEven = numbers.some((num)=>{
+   
+//    return num % 5 === 0
+// })
+
+// console.log(hasEven);
+
+// ---------------------------------------------------
+
+// every()
+
+// .every() is a method used with arrays.
+// It checks every item in the array.
+// It answers a yes or no question:
+// 👉 “Do all the items pass the test?”
+
+// If all items pass the test, it gives you true.
+// If even one item fails, it gives you false.
+
+// let numbers = [2,4,6,8]
+// let numberPassed = numbers.every((num)=>{
+//     if(num % 2 === 0){
+//         return num
+//     }
+// })
+
+// console.log("aLL values passed! " + numberPassed)
+
+// ----------------------------------------------------------------
+
+// optional chaining
+
+// let obj = {
+//     name:"ibrahim",
+//     age: 19,
+//     skills:{
+//         language:"javascript",
+//         framework: "react"
+//     },
+    
+
+// }
+
+// console.log(obj.name + " skilled in " + obj.skills.language + " and " + obj.skills.framework)
+
+
+
+
+// ----------------------------------------------------------------
+
+
+// Exponentiation Operator
+
+// let power = Math.pow(5,2)
+// console.log("5 to the power 2 is: " + power)
+
+// another method
+
+// let power1 = 5**2;
+// console.log("5 to the power 2 is: "+ power1)
+
+
+// ----------------------------------------------------------------
+
+
+// Higher order function
+
+// Accepts another function as an argument, or
+
+// Returns a new function,
+
+// --
+// first:. accepting another function as an argument
+
+// function shout(name){
+//     return "Hello  " + name
+// }
+
+// function greet(fn, unserName){
+//     return fn(unserName)
+// }
+
+// // console.log(greet(shout, "Ibrahim"))
+// --
+
+// second:  Returning a function
+
+// function multiplyBy(x){
+//     return function(y){
+//         return x * y
+//     }
+// }
+
+// let double = multiplyBy(2)
+// console.log(double(5))
+
+// ----------------------------------------------------------------
+
+// closures()
+
+
+// const outerFunction = ()=>{
+//     let smit = "saylani";
+
+//     const innerFunction = ()=>{
+//         console.log(smit);
+//     }
+//     innerFunction()
+// }
+
+// outerFunction();
+
+// ---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------

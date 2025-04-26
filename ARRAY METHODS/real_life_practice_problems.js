@@ -82,43 +82,137 @@
 // filter
 // Given an array of user accounts, show only those who are active and verified.
 
-const users = [
-{name: "ibrahim", verified: true, active: true},
+// const users = [
+// {name: "ibrahim", verified: true, active: true},
 
-{ name: "Abaas", verified: true, active: true},
+// { name: "Abaas", verified: true, active: true},
 
- {name: "amjad", verified: false, active:false},
+//  {name: "amjad", verified: false, active:false},
 
- {name: "salah", verified: true, active: false},
-]
-
-
-let filtered_user = users.filter((user)=>{
-  if(user.active && user.verified){
-    return true
-  }
-  else{
-    return false
-  }
-})
-
-console.log(filtered_user)
+//  {name: "salah", verified: true, active: false},
+// ]
 
 
+// let filtered_user = users.filter((user)=>{
+//   if(user.active && user.verified){
+//     return true
+//   }
+//   else{
+//     return false
+//   }
+// })
+
+// console.log(filtered_user)
+
+// --------------------------------------------------------
 
 
 // reduce
 
+// let numbers = [1,2,3,4,5]
+// let total = numbers.reduce((accumulator, CurrentValue)=>{
+//     return accumulator + CurrentValue
+// }, 0)
+
+// console.log(total)
+
+// reduce is a method in JavaScript used to take all the values of an array and combine them into a single value.
+// This "combination" can be addition, multiplication, joining strings, making a new object, anything.
+
 // Each blog post has a likes field. Calculate the total likes.
 
-const posts = [
-    { title: "Post 1", likes: 100 },
-    { title: "Post 2", likes: 250 },
-    { title: "Post 3", likes: 150 }
-  ];
+
+
+
+// --------------------------------------------------------
+
+// reduce
+
+
+// let posts = [
+//   {title: "post1", likes: 100},
+//   {title: "post2", likes: 200},
+//   {title: "post3", likes:300}
+// ]
+
+// let totalLikes = posts.reduce((sum, post)=>{
+//   return sum + post.likes
+// },200)
+
+// console.log(totalLikes)
+
+// ---------------------------------------------------
+
+// reduce
+
+// accumulator: where the result is stored (like a basket collecting stuff)
+
+// currentValue: current item from the array
+
+// initialValue: starting value for accumulator
+// --------------------------------------------------------
+
+// some()
+
+// let products1 = [
+//     {name: "laptop", status: true},
+//     {name: "computer", status: false},
+//     {name:"mobiles", status: false}
+// ]
+
+// let check_status1 = products1.some((product)=>{
+//     return product.status === true
+// })
+
+// console.log(check_status1)
+
+
+// // --------------------------------------------------------
+
+// // every()
+
+// let products = [
+//     {name: "laptop", status: true},
+//     {name: "computer", status: true},
+//     {name:"mobiles", status: true}
+// ]
+
+// let check_status = products.every((product)=>{
+//     return product.status === true
+// })
+
+// console.log(check_status)
+
+
+// --------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  const totalLikes = posts.reduce((sum, post) => sum + post.likes, 0);
-  console.log("Total Likes:", totalLikes);
   
 
 
